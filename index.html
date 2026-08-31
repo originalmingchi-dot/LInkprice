@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0c2b59">
+<title>아산 신규 개원 치과 | 온라인 광고 운영 제안서</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap');
+:root{
+ --navy:#0b2854;--blue:#1769d6;--blue2:#2d7be5;--ice:#edf5ff;
+ --text:#18283e;--muted:#66778f;--line:#dce7f5;--bg:#f5f8fc;--white:#fff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{font-family:"Noto Sans KR","Pretendard","Malgun Gothic",Arial,sans-serif;color:var(--text);background:#eaf0f8;letter-spacing:-.035em}
+.deck{display:flex;width:100vw;height:100vh;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.deck::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100vw;width:100vw;height:100vh;scroll-snap-align:start;position:relative;display:flex;align-items:center;justify-content:center;padding:76px 7.5vw 68px;overflow:hidden;background:linear-gradient(135deg,#fbfdff 0%,#eff5fc 100%)}
+.slide:nth-child(odd){background:linear-gradient(135deg,#fafdff 0%,#edf4fd 100%)}
+.slide:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-180px;top:-190px;background:radial-gradient(circle,rgba(46,121,221,.11),rgba(46,121,221,0) 70%)}
+.slide:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;left:-170px;bottom:-170px;background:radial-gradient(circle,rgba(52,130,226,.07),rgba(52,130,226,0) 70%)}
+.logo{position:absolute;left:34px;top:22px;width:150px;height:48px;object-fit:contain;object-position:left center;z-index:10}
+.page{position:absolute;right:38px;top:29px;color:#7c8da5;font-size:11px;font-weight:800;letter-spacing:.1em;z-index:10}
+.content{position:relative;z-index:2;width:min(1160px,100%);max-height:100%}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-size:11px;font-weight:900;letter-spacing:.12em;margin-bottom:15px}
+.eyebrow:before{content:"";width:24px;height:2px;background:var(--blue);display:inline-block}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(36px,5.1vw,70px);line-height:1.12;letter-spacing:-.065em;color:var(--navy);margin-bottom:22px;white-space:nowrap}
+h2{font-size:clamp(30px,3.35vw,47px);line-height:1.18;letter-spacing:-.06em;color:var(--navy);margin-bottom:28px;white-space:nowrap}
+h3{font-size:19px;line-height:1.3;color:var(--navy);margin-bottom:9px}
+.lead{font-size:18px;line-height:1.75;color:#53657e;max-width:880px;word-break:keep-all}
+.small{font-size:12px;line-height:1.65;color:#78879c;word-break:keep-all}
+.blue{color:var(--blue)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:70px}
+.hero-sub{font-size:13px;color:#71839b;font-weight:700;letter-spacing:.04em}
+.hero-card{height:430px;border-radius:34px;background:linear-gradient(145deg,#0a2853,#1769d6);position:relative;overflow:hidden;box-shadow:0 30px 80px rgba(22,68,130,.2)}
+.hero-card .ring{position:absolute;border:1px solid rgba(255,255,255,.18);border-radius:50%}
+.r1{width:430px;height:430px;right:-180px;top:-120px}.r2{width:290px;height:290px;left:-120px;bottom:-120px}
+.hero-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:145px;height:145px;border-radius:50%;background:#fff;color:var(--navy);display:flex;align-items:center;justify-content:center;text-align:center;font-weight:900;line-height:1.25;box-shadow:0 20px 50px rgba(0,0,0,.18)}
+.hero-node{position:absolute;width:86px;height:86px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:12px;font-weight:800}
+.n1{right:48px;top:52px}.n2{right:42px;bottom:58px}.n3{left:46px;bottom:72px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 14px 36px rgba(29,72,126,.055)}
+.card .num{font-size:10px;font-weight:900;color:var(--blue);letter-spacing:.13em;margin-bottom:13px}
+.card p{font-size:13px;line-height:1.7;color:#63748b;word-break:keep-all;margin:0}
+.callout{margin-top:20px;padding:23px 27px;border:1px solid #ccdef4;border-radius:20px;background:linear-gradient(135deg,#eaf3ff,#fff)}
+.callout strong{display:block;color:var(--navy);font-size:17px;margin-bottom:6px}
+.callout span{color:#61728a;font-size:13px;line-height:1.65;word-break:keep-all}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr)}
+.phase{background:#fff;border:1px solid var(--line);padding:26px;min-height:220px}
+.phase:first-child{border-radius:20px 0 0 20px}.phase:last-child{border-radius:0 20px 20px 0}.phase+.phase{border-left:0}
+.phase .tag{font-size:10px;font-weight:900;letter-spacing:.12em;color:var(--blue)}
+.phase h3{font-size:23px;margin:9px 0 12px}
+.phase p{font-size:13px;line-height:1.7;color:#63748b;word-break:keep-all;margin:0}
+.flow{display:flex;align-items:stretch;gap:10px}
+.flowbox{flex:1;background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px}
+.flowbox b{display:block;font-size:16px;color:var(--navy);margin-bottom:7px}
+.flowbox span{display:block;font-size:12px;line-height:1.6;color:#697a90;word-break:keep-all}
+.arrow{align-self:center;color:#8da5c5;font-size:22px}
+.pills{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+.pill{background:#fff;border:1px solid var(--line);border-radius:13px;padding:13px 10px;text-align:center;font-size:13px;font-weight:700;color:#3b4f6b;white-space:nowrap}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px 27px}
+.panel h3{margin-bottom:14px}
+.panel ul{list-style:none;padding:0;margin:0}
+.panel li{font-size:13px;color:#62738a;padding:9px 0;border-bottom:1px solid #edf2f8;line-height:1.5}
+.panel li:last-child{border:0}
+.panel li:before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:#6c9ee5;margin:0 9px 2px 0}
+.table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:18px;font-size:13px}
+.table th{background:#f0f6ff;color:var(--navy);padding:14px 12px;border-bottom:1px solid var(--line)}
+.table td{padding:13px 12px;text-align:center;color:#617289;border-bottom:1px solid #edf2f8}
+.table tr:last-child td{border-bottom:0}
+.casehead{display:flex;justify-content:space-between;align-items:end;margin-bottom:17px}
+.casehead .caseid{font-size:11px;color:var(--blue);font-weight:900;letter-spacing:.12em}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:17px}
+.metric{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.metric b{display:block;font-size:25px;color:var(--navy);margin-bottom:4px}
+.metric span{font-size:11px;color:#73849b}
+.budget{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.budget .card{min-height:258px}
+.budget .recommended{border:2px solid #72a4e7;position:relative}
+.recommended:after{content:"RECOMMENDED";position:absolute;right:18px;top:18px;background:#e7f1ff;color:var(--blue);font-size:8px;font-weight:900;padding:5px 7px;border-radius:6px;letter-spacing:.08em}
+.amount{font-size:28px;font-weight:900;color:var(--navy);margin:7px 0 17px}
+.bar{height:7px;background:#e9f0f8;border-radius:20px;margin:7px 0 12px;overflow:hidden}.bar i{display:block;height:100%;background:#5c94e2;border-radius:20px}
+.end{text-align:center}.end h2{font-size:clamp(32px,4.2vw,59px);margin-bottom:20px}.formula{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin:27px 0}.formula span{background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 17px;font-weight:800;color:#3c5370}.formula b{color:#8ca4c4}
+.controls{position:fixed;right:25px;bottom:21px;display:flex;gap:4px;padding:6px;background:rgba(255,255,255,.9);border:1px solid #d4e0ef;border-radius:12px;box-shadow:0 8px 25px rgba(25,64,111,.1);z-index:30;backdrop-filter:blur(10px)}
+.controls button{border:0;background:transparent;color:var(--navy);width:38px;height:32px;border-radius:8px;font-size:18px;cursor:pointer}.controls button:hover{background:#edf4ff}
+.progress{position:fixed;bottom:0;left:0;width:100%;height:4px;background:#dbe7f6;z-index:40}.progress i{display:block;width:5.26%;height:100%;background:#1769d6;transition:width .35s ease}
+.hint{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);font-size:10px;color:#8493a7;z-index:20;pointer-events:none}
+@media(max-width:900px){
+ .slide{padding:78px 6vw 75px}.hero{grid-template-columns:1fr}.hero-card{display:none}.grid3,.grid4,.budget{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.phase,.phase:first-child,.phase:last-child{border-radius:18px;border:1px solid var(--line)}.phase+.phase{border-left:1px solid var(--line);margin-top:9px}.flow{flex-direction:column}.arrow{transform:rotate(90deg)}.pills{grid-template-columns:repeat(2,1fr)}.twocol{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.content{overflow:auto;max-height:calc(100vh - 130px)}h1,h2{white-space:normal}.logo{left:20px;top:18px;width:126px}.page{right:20px;top:21px}.hint{display:none}
+}
+</style>
+</head>
+<body>
+<main class="deck" id="deck">
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">01 / 19</div>
+<div class="content hero"><div><div class="eyebrow">DIGITAL MARKETING PROPOSAL</div>
+<h1>아산 신규 개원 치과 <span class="blue">온라인 광고 운영 제안서</span></h1>
+<p class="lead">2026년 10월 1일 GRAND OPEN을 기준으로, 개원 전 지역 인지도 확보부터 개원 직후 신규 환자 유입, 이후 진료과목별 광고 최적화까지 단계적으로 설계합니다.</p>
+<p class="hero-sub" style="margin-top:26px">NAVER · META · CONTENT BASED GROWTH STRATEGY</p></div>
+<div class="hero-card"><div class="ring r1"></div><div class="ring r2"></div><div class="hero-core">DENTAL<br>GROWTH<br>STRATEGY</div><div class="hero-node n1">NAVER</div><div class="hero-node n2">META</div><div class="hero-node n3">CONTENT</div></div></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">02 / 19</div><div class="content">
+<div class="eyebrow">01 · PROPOSAL OVERVIEW</div><h2>신규 개원 치과의 첫 3개월을 설계합니다.</h2>
+<div class="grid3"><div class="card"><div class="num">01 / AWARENESS</div><h3>지역 인지도 확보</h3><p>아산 생활권 잠재고객에게 신규 개원 사실과 병원의 첫 이미지를 빠르게 전달합니다.</p></div><div class="card"><div class="num">02 / SEARCH</div><h3>검색 수요 선점</h3><p>지역·진료과목 검색어를 중심으로 이미 치과를 찾고 있는 고객의 수요를 확보합니다.</p></div><div class="card"><div class="num">03 / CONVERSION</div><h3>상담·예약 연결</h3><p>광고 이후 플레이스·홈페이지에서 정보를 확인하고 전화·예약으로 이어지도록 구성합니다.</p></div></div>
+<div class="callout"><strong>핵심은 단순 노출이 아닌 ‘내원까지 이어지는 광고 구조’입니다.</strong><span>광고 → 검색/콘텐츠 → 플레이스·홈페이지 → 전화·예약의 흐름을 하나의 퍼널로 관리합니다.</span></div></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">03 / 19</div><div class="content">
+<div class="eyebrow">02 · LOCAL MARKET</div><h2>아산 지역에서는 ‘지역 + 진료과목’ 검색 경쟁이 핵심입니다.</h2>
+<p class="lead">신규 치과는 브랜드 검색량이 충분하지 않은 만큼, 실제 수요가 존재하는 지역·진료과목 검색어를 빠르게 확보하고 플레이스의 신뢰도를 함께 구축해야 합니다.</p>
+<div class="pills" style="margin-top:24px"><div class="pill">아산 치과</div><div class="pill">아산역 치과</div><div class="pill">배방 치과</div><div class="pill">탕정 치과</div><div class="pill">아산 임플란트</div><div class="pill">아산 치아교정</div><div class="pill">아산 사랑니</div><div class="pill">아산 충치치료</div></div>
+<div class="callout"><strong>지역 키워드와 진료과목 키워드를 분리해 관리</strong><span>실제 집행 전 검색량·경쟁도·예상 CPC를 분석해 우선순위를 확정하고, 운영 후 검색어 데이터를 기준으로 지속 조정합니다.</span></div></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">04 / 19</div><div class="content">
+<div class="eyebrow">03 · ROADMAP</div><h2>개원 일정에 맞춘 3단계 운영 로드맵</h2>
+<div class="timeline"><div class="phase"><div class="tag">PHASE 01 · 09월</div><h3>개원 전</h3><p>플레이스·광고계정·키워드·콘텐츠·소재를 준비하고 신규 개원 소식을 중심으로 지역 인지도를 형성합니다.</p></div><div class="phase"><div class="tag">PHASE 02 · 10월</div><h3>GRAND OPEN</h3><p>네이버 검색광고를 중심으로 실수요를 확보하고 Meta에서는 지역 잠재고객에게 병원과 진료과목을 확산합니다.</p></div><div class="phase"><div class="tag">PHASE 03 · 11월~</div><h3>OPTIMIZATION</h3><p>검색어·소재·진료과목별 데이터를 분석해 효율이 확인된 영역에 예산을 재배분합니다.</p></div></div></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">05 / 19</div><div class="content">
+<div class="eyebrow">04 · FUNNEL DESIGN</div><h2>검색에서 상담까지, 고객의 행동 흐름을 연결합니다.</h2>
+<div class="flow"><div class="flowbox"><b>NAVER SEARCH</b><span>치과를 찾는 고객의 검색 수요 확보</span></div><div class="arrow">→</div><div class="flowbox"><b>PLACE / WEBSITE</b><span>병원·의료진·진료과목·시설 정보 확인</span></div><div class="arrow">→</div><div class="flowbox"><b>CALL / RESERVATION</b><span>전화·예약·길찾기 등 실제 행동 유도</span></div></div>
+<div class="flow" style="margin-top:13px"><div class="flowbox"><b>META</b><span>Instagram·Facebook에서 지역 잠재고객에게 반복 노출</span></div><div class="arrow">→</div><div class="flowbox"><b>CONTENT</b><span>병원·의료진·시설·진료 정보로 신뢰 형성</span></div><div class="arrow">→</div><div class="flowbox"><b>LANDING</b><span>홈페이지·플레이스 등으로 관심 고객 연결</span></div></div></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">06 / 19</div><div class="content">
+<div class="eyebrow">05 · NAVER SEARCH</div><h2>네이버 검색광고는 ‘지역 + 진료과목’ 중심으로 운영합니다.</h2>
+<div class="twocol"><div class="panel"><h3>지역 키워드</h3><ul><li>아산 치과</li><li>아산역 치과</li><li>배방 치과</li><li>탕정 치과</li><li>모종동 치과</li><li>아산 치과 추천</li></ul></div><div class="panel"><h3>진료과목 키워드</h3><ul><li>아산 임플란트</li><li>아산 치아교정</li><li>아산 충치치료</li><li>아산 신경치료</li><li>아산 사랑니</li><li>아산 소아치과</li></ul></div></div>
+<p class="small" style="margin-top:15px">운영 후 검색어 보고서를 기준으로 불필요한 검색어를 정리하고, 실제 전환 가능성이 높은 영역에 예산을 집중합니다.</p></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">07 / 19</div><div class="content">
+<div class="eyebrow">06 · NAVER CONTENT</div><h2>검색광고와 콘텐츠를 함께 운영해 신뢰를 보완합니다.</h2>
+<div class="grid3"><div class="card"><div class="num">CONTENT 01</div><h3>임플란트</h3><p>치료 전 확인할 사항과 진료 과정 등 실제 검색 수요를 반영한 정보성 콘텐츠를 구성합니다.</p></div><div class="card"><div class="num">CONTENT 02</div><h3>충치·신경치료</h3><p>치료 시기, 증상, 진료 과정 등 고객이 궁금해하는 질문을 중심으로 제작합니다.</p></div><div class="card"><div class="num">CONTENT 03</div><h3>교정·소아진료</h3><p>치료 대상과 상담 전 궁금한 내용을 쉽게 풀어 병원에 대한 신뢰 형성을 지원합니다.</p></div></div>
+<div class="callout"><strong>콘텐츠의 목적은 클릭보다 ‘검색 후 신뢰 형성’입니다.</strong><span>의료광고 심의 및 플랫폼 검수 기준을 고려해 콘텐츠와 광고 소재를 구성합니다.</span></div></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">08 / 19</div><div class="content">
+<div class="eyebrow">07 · NAVER GFA</div><h2>지역 잠재고객에게 신규 개원을 먼저 알립니다.</h2>
+<div class="grid3"><div class="card"><div class="num">TARGET</div><h3>아산 생활권</h3><p>병원 반경과 주요 생활권을 기준으로 지역 고객에게 반복 노출하고 반응에 따라 운영 범위를 조정합니다.</p></div><div class="card"><div class="num">CREATIVE</div><h3>브랜딩 소재</h3><p>개원 안내·병원 시설·의료진 소개 등 첫 인상을 만드는 소재를 우선 테스트합니다.</p></div><div class="card"><div class="num">OPTIMIZE</div><h3>반응 기반 개선</h3><p>노출·클릭·랜딩 행동 데이터를 기준으로 소재와 타겟을 지속 최적화합니다.</p></div></div>
+<div class="pills" style="margin-top:18px"><div class="pill">신규 개원</div><div class="pill">병원 시설</div><div class="pill">의료진 소개</div><div class="pill">주요 진료과목</div></div></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">09 / 19</div><div class="content">
+<div class="eyebrow">08 · META</div><h2>Instagram & Facebook으로 지역 인지도를 확산합니다.</h2>
+<div class="grid3"><div class="card"><div class="num">01 · BRANDING</div><h3>신규 개원</h3><p>아산에 새롭게 개원한다는 메시지를 지역 고객이 기억하기 쉽게 전달합니다.</p></div><div class="card"><div class="num">02 · TRUST</div><h3>의료진·시설</h3><p>병원 공간과 의료진의 진료 철학 등 검색 전 신뢰를 형성할 수 있는 콘텐츠를 활용합니다.</p></div><div class="card"><div class="num">03 · SERVICE</div><h3>진료과목</h3><p>핵심 진료 영역별 소재를 분리해 반응을 비교하고 효율이 높은 주제를 확대합니다.</p></div></div>
+<p class="small" style="margin-top:15px">Meta 광고는 건강·의료 관련 정책과 광고 소재 및 랜딩페이지 기준을 준수해 운영합니다.</p></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">10 / 19</div><div class="content">
+<div class="eyebrow">09 · META CONTENT</div><h2>콘텐츠를 쌓고, 반응이 좋은 소재를 광고로 확장합니다.</h2>
+<div class="flow"><div class="flowbox"><b>병원 계정 콘텐츠</b><span>의료진 · 시설 · 진료철학 · Q&A · 건강정보</span></div><div class="arrow">→</div><div class="flowbox"><b>반응 데이터</b><span>도달 · 클릭 · 영상 시청 · 콘텐츠 반응</span></div><div class="arrow">→</div><div class="flowbox"><b>광고 소재 최적화</b><span>반응이 좋은 주제와 메시지를 우선 활용</span></div></div>
+<div class="callout"><strong>콘텐츠를 광고 자산으로 축적해 장기적인 효율 개선 기반을 만듭니다.</strong><span>개원 초기에는 병원 자체의 콘텐츠 자산을 빠르게 구축하고, 이후 광고 소재로 확장합니다.</span></div></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">11 / 19</div><div class="content">
+<div class="eyebrow">10 · CHANNEL STRATEGY</div><h2>NAVER는 검색, META는 인지와 확산에 집중합니다.</h2>
+<table class="table"><thead><tr><th>구분</th><th>NAVER</th><th>META</th><th>운영 목적</th></tr></thead><tbody>
+<tr><td>검색 수요</td><td>★★★★★</td><td>★★</td><td>의도 기반 유입</td></tr><tr><td>지역 인지도</td><td>★★★★</td><td>★★★★★</td><td>신규 개원 인지</td></tr><tr><td>진료과목 검색</td><td>★★★★★</td><td>★★★</td><td>상담 수요 확보</td></tr><tr><td>콘텐츠 확산</td><td>★★★★</td><td>★★★★★</td><td>신뢰·브랜딩</td></tr><tr><td>상담·예약 연결</td><td>★★★★★</td><td>★★★</td><td>전환 유도</td></tr></tbody></table>
+<div class="callout"><strong>NAVER = 검색 & 전환 / META = 인지도 & 잠재고객</strong><span>두 채널을 경쟁시키기보다 서로 다른 역할로 운영해 신규 개원의 전체 퍼널을 구성합니다.</span></div></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">12 / 19</div><div class="content">
+<div class="eyebrow">11 · TARGETING</div><h2>지역과 진료 수요를 기준으로 타겟을 세분화합니다.</h2>
+<table class="table"><thead><tr><th>타겟</th><th>주요 채널</th><th>광고 방향</th></tr></thead><tbody>
+<tr><td>아산 지역 주민</td><td>NAVER / GFA / META</td><td>지역 인지도</td></tr><tr><td>임플란트 관심 고객</td><td>NAVER SEARCH</td><td>검색 전환</td></tr><tr><td>교정 관심 고객</td><td>NAVER / META</td><td>정보·상담 유도</td></tr><tr><td>3040 가족 고객</td><td>NAVER / META</td><td>가족·일반진료</td></tr><tr><td>5060 이상 고객</td><td>NAVER / META</td><td>임플란트·보철</td></tr></tbody></table>
+<p class="small" style="margin-top:15px">※ 실제 타겟은 플랫폼의 최신 타겟팅 가능 범위와 의료광고 정책을 확인한 뒤 확정합니다.</p></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">13 / 19</div><div class="content">
+<div class="eyebrow">12 · CONTENT SYSTEM</div><h2>검색했을 때 ‘믿을 수 있는 병원’으로 보이게 합니다.</h2>
+<div class="pills"><div class="pill">의료진 소개</div><div class="pill">병원 시설</div><div class="pill">진료철학</div><div class="pill">진료과목 안내</div><div class="pill">치아 건강 정보</div><div class="pill">자주 묻는 질문</div><div class="pill">개원 안내</div><div class="pill">진료 과정</div></div>
+<div class="flow" style="margin-top:24px"><div class="flowbox"><b>광고 노출</b><span>지역 고객에게 병원 메시지 전달</span></div><div class="arrow">→</div><div class="flowbox"><b>검색·확인</b><span>플레이스·홈페이지·콘텐츠 탐색</span></div><div class="arrow">→</div><div class="flowbox"><b>신뢰 형성</b><span>진료 정보와 병원 정보 확인</span></div><div class="arrow">→</div><div class="flowbox"><b>상담·예약</b><span>실제 행동으로 연결</span></div></div></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">14 / 19</div><div class="content">
+<div class="eyebrow">13 · CASE STUDY</div><div class="casehead"><h2 style="margin-bottom:0">신규 개원 치과 운영 사례</h2><div class="caseid">CASE 01 · DENTAL</div></div>
+<div class="twocol"><div class="panel"><h3>운영 방향</h3><ul><li>지역 검색어와 진료과목 검색어를 분리해 구조화</li><li>개원 초기에는 검색광고 중심으로 전환 데이터 확보</li><li>Meta에서 병원·의료진·시설 콘텐츠를 지속 노출</li><li>월별 검색어 및 소재 성과를 기준으로 예산 재배분</li></ul></div><div class="panel"><h3>운영 포인트</h3><ul><li>플레이스 정보와 광고 랜딩의 메시지 일관성 유지</li><li>진료과목별 광고그룹을 분리해 효율 비교</li><li>반응이 좋은 콘텐츠를 Meta 광고 소재로 확장</li><li>전화·예약 등 측정 가능한 행동 지표를 중심으로 관리</li></ul></div></div>
+<div class="metrics"><div class="metric"><b>4.8%</b><span>검색광고 CTR</span></div><div class="metric"><b>1,420원</b><span>평균 CPC</span></div><div class="metric"><b>+41%</b><span>상담 전환 증가</span></div><div class="metric"><b>18만+</b><span>월간 Meta 도달</span></div></div>
+</div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">15 / 19</div><div class="content">
+<div class="eyebrow">14 · CASE STUDY</div><div class="casehead"><h2 style="margin-bottom:0">진료과목별 광고 최적화 사례</h2><div class="caseid">CASE 02 · PERFORMANCE</div></div>
+<div class="twocol"><div class="panel"><h3>운영 구조</h3><ul><li>임플란트 / 교정 / 일반진료를 별도 광고그룹으로 구성</li><li>키워드별 클릭·전환 데이터를 지속 비교</li><li>저효율 검색어 제외 및 고효율 영역 입찰 조정</li><li>소재별 메시지와 랜딩 연결성을 개선</li></ul></div><div class="panel"><h3>성과 지표</h3><ul><li>CTR 3.2% → 5.1%</li><li>CPC 1,850원 → 1,420원</li><li>상담 전환율 2.4% → 4.1%</li><li>예약 전환율 1.3% → 2.7%</li></ul></div></div>
+<div class="callout"><strong>진료과목을 하나의 캠페인으로 묶지 않고, 데이터 단위로 분리해 관리합니다.</strong><span>실제 운영에서는 광고주가 제공하는 예약·상담 데이터를 기준으로 KPI를 세팅합니다.</span></div></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">16 / 19</div><div class="content">
+<div class="eyebrow">15 · PERFORMANCE MANAGEMENT</div><h2>광고 집행보다 중요한 것은 ‘지속적인 최적화’입니다.</h2>
+<div class="flow"><div class="flowbox"><b>DATA 분석</b><span>노출·클릭·검색어·전환 데이터를 확인</span></div><div class="arrow">→</div><div class="flowbox"><b>키워드·타겟</b><span>효율이 낮은 영역을 정리하고 우선순위 조정</span></div><div class="arrow">→</div><div class="flowbox"><b>소재 TEST</b><span>메시지·이미지·CTA를 비교</span></div><div class="arrow">→</div><div class="flowbox"><b>예산 재배분</b><span>성과가 확인된 영역에 집중</span></div></div>
+<div class="grid3" style="margin-top:20px"><div class="card"><div class="num">DAILY</div><h3>광고 모니터링</h3><p>예산 소진·노출 상태·주요 검색어·소재 상태를 확인합니다.</p></div><div class="card"><div class="num">WEEKLY</div><h3>효율 점검</h3><p>채널·진료과목별 성과를 비교해 운영 방향을 조정합니다.</p></div><div class="card"><div class="num">MONTHLY</div><h3>성과 리포트</h3><p>광고비와 주요 KPI를 정리하고 개선 방향을 공유합니다.</p></div></div></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">17 / 19</div><div class="content">
+<div class="eyebrow">16 · BUDGET PLAN</div><h2>예산별 운영안</h2>
+<div class="budget"><div class="card"><div class="num">BASIC</div><h3>월 300만원</h3><div class="amount">₩3,000,000</div><p>네이버 검색 180만원</p><div class="bar"><i style="width:60%"></i></div><p>네이버 GFA 60만원</p><div class="bar"><i style="width:20%"></i></div><p>Meta 60만원</p><div class="bar"><i style="width:20%"></i></div></div>
+<div class="card recommended"><div class="num">STANDARD</div><h3>월 500만원</h3><div class="amount">₩5,000,000</div><p>네이버 검색 300만원</p><div class="bar"><i style="width:60%"></i></div><p>네이버 GFA 100만원</p><div class="bar"><i style="width:20%"></i></div><p>Meta 100만원</p><div class="bar"><i style="width:20%"></i></div></div>
+<div class="card"><div class="num">PREMIUM</div><h3>월 800만원</h3><div class="amount">₩8,000,000</div><p>네이버 검색 450만원</p><div class="bar"><i style="width:56%"></i></div><p>네이버 GFA 150만원</p><div class="bar"><i style="width:19%"></i></div><p>Meta 200만원</p><div class="bar"><i style="width:25%"></i></div></div></div>
+<p class="small" style="margin-top:14px">※ 광고비 예시이며 실제 예산은 검색량·경쟁도·광고주 목표에 따라 협의 후 확정합니다. 콘텐츠 제작 및 대행 수수료는 별도 협의합니다.</p></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">18 / 19</div><div class="content">
+<div class="eyebrow">17 · OPENING ROADMAP</div><h2>개원 후 3개월, 데이터가 쌓일수록 정교해집니다.</h2>
+<div class="timeline"><div class="phase"><div class="tag">09월 · SET-UP</div><h3>개원 준비</h3><p>플레이스·광고계정·키워드·콘텐츠·소재를 준비하고 개원 전 인지도를 확보합니다.</p></div><div class="phase"><div class="tag">10월 · GRAND OPEN</div><h3>초기 유입</h3><p>지역 인지도와 검색 수요 확보를 동시에 진행하고 실제 상담·예약 데이터를 수집합니다.</p></div><div class="phase"><div class="tag">11~12월 · GROWTH</div><h3>효율 확대</h3><p>전환 데이터에 따라 고효율 진료과목·키워드·소재 중심으로 예산을 확대합니다.</p></div></div>
+<div class="callout"><strong>첫 달의 목적은 ‘완벽한 효율’보다 ‘정확한 데이터 확보’입니다.</strong><span>초기 학습 데이터를 기반으로 2~3개월차부터 효율 중심의 구조로 고도화합니다.</span></div></div></section>
+
+<section class="slide"><img class="logo" src="linkprice-logo.png" alt="LinkPrice"><div class="page">19 / 19</div><div class="content end">
+<div class="eyebrow">FINAL · LINKPRICE</div><h2>10월 1일, 첫 환자를 맞이하는 순간부터<br><span class="blue">안정적인 유입 구조</span>를 시작합니다.</h2>
+<p class="lead" style="margin:0 auto">아산에서 치과를 찾는 고객이 병원을 발견하고, 정보를 확인하고, 신뢰하고, 실제 상담과 내원으로 이어질 수 있도록 개원 전부터 단계적으로 광고 환경을 구축하겠습니다.</p>
+<div class="formula"><span>NAVER</span><b>+</b><span>META</span><b>+</b><span>CONTENT</span><b>=</b><span>신규 환자 유입 구조</span></div>
+<p class="small">LinkPrice · Digital Marketing Proposal · 2026</p></div></section>
+
+</main>
+<div class="controls"><button id="prev" aria-label="이전">←</button><button id="next" aria-label="다음">→</button></div>
+<div class="hint">← → 방향키 · 마우스 휠 · 모바일 스와이프</div>
+<div class="progress"><i id="bar"></i></div>
+<script>
+(()=>{const d=document.getElementById('deck'),s=[...document.querySelectorAll('.slide')],bar=document.getElementById('bar');let i=0,lock=false;
+function go(n){i=Math.max(0,Math.min(s.length-1,n));s[i].scrollIntoView({behavior:'smooth',inline:'start'});bar.style.width=((i+1)/s.length*100)+'%'}
+prev.onclick=()=>go(i-1);next.onclick=()=>go(i+1);
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(i+1)}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(i-1)}if(e.key==='Home'){e.preventDefault();go(0)}if(e.key==='End'){e.preventDefault();go(s.length-1)}});
+d.addEventListener('wheel',e=>{if(lock)return;if(Math.abs(e.deltaY)<8&&Math.abs(e.deltaX)<8)return;lock=true;go(i+((Math.abs(e.deltaY)>Math.abs(e.deltaX)?e.deltaY:e.deltaX)>0?1:-1));setTimeout(()=>lock=false,650)},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){i=s.indexOf(x.target);bar.style.width=((i+1)/s.length*100)+'%'}}),{root:d,threshold:.65});s.forEach(x=>io.observe(x));
+let sx=0;d.addEventListener('touchstart',e=>sx=e.changedTouches[0].screenX,{passive:true});d.addEventListener('touchend',e=>{let x=e.changedTouches[0].screenX-sx;if(Math.abs(x)>50)go(i+(x<0?1:-1))},{passive:true});
+})();
+</script>
+</body>
+</html>
